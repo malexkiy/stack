@@ -88,12 +88,12 @@ void stack<T>::push(T const& obj)
 	{
 		delete[] array_;
 		array_size_ = 1;
-		array_ = new int[array_size_]();
+		array_ = new T[array_size_]();
 	}
 	else if (count_ + 1 >= array_size_)
 	{
 		array_size_ *= 2;
-		T* narray = new int[array_size_]();
+		T* narray = new T[array_size_]();
 		for (unsigned int i = 0; i < count_; i++)
 		{
 			narray[i] = array_[i];
